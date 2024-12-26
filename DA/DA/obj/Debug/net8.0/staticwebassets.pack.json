@@ -1,0 +1,537 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\DA.bundle.scp.css",
+      "PackagePath": "staticwebassets\\DA.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\css\\app.css.map",
+      "PackagePath": "staticwebassets\\css\\app.css.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\fonts\\.gitkeep",
+      "PackagePath": "staticwebassets\\fonts\\.gitkeep"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\carousels\\carousel1.jpg",
+      "PackagePath": "staticwebassets\\images\\carousels\\carousel1.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\carousels\\carousel2.jpg",
+      "PackagePath": "staticwebassets\\images\\carousels\\carousel2.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\carousels\\carousel3.jpg",
+      "PackagePath": "staticwebassets\\images\\carousels\\carousel3.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\carousels\\hero-banner-d-adidas-vivid-horizon-170924.avif",
+      "PackagePath": "staticwebassets\\images\\carousels\\hero-banner-d-adidas-vivid-horizon-170924.avif"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\carousels\\hero-banner-d-nike-voltage-101024.webp",
+      "PackagePath": "staticwebassets\\images\\carousels\\hero-banner-d-nike-voltage-101024.webp"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\logo\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo\\logo.png"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\06017255-38dd-4c8a-a6ee-35be300dd7df_Usecase.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\06017255-38dd-4c8a-a6ee-35be300dd7df_Usecase.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\116ea6cc-e04b-4b10-81ab-50a37a898fc7_5bc9157a-973b-4c77-88bc-afe7ddbbc2de_mc2011.PNG",
+      "PackagePath": "staticwebassets\\images\\products\\116ea6cc-e04b-4b10-81ab-50a37a898fc7_5bc9157a-973b-4c77-88bc-afe7ddbbc2de_mc2011.PNG"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\205198f5-7052-460b-a435-01727a46d984_mc.PNG",
+      "PackagePath": "staticwebassets\\images\\products\\205198f5-7052-460b-a435-01727a46d984_mc.PNG"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\23c27bdd-4075-4841-906f-8b7a8da73d0b_Usecase.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\23c27bdd-4075-4841-906f-8b7a8da73d0b_Usecase.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\36aa50a4-c165-42cd-be18-cd6664b3e104_mc.PNG",
+      "PackagePath": "staticwebassets\\images\\products\\36aa50a4-c165-42cd-be18-cd6664b3e104_mc.PNG"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\431c9b5f-1eca-4dce-9495-b5bc837611e6_mc2011.PNG",
+      "PackagePath": "staticwebassets\\images\\products\\431c9b5f-1eca-4dce-9495-b5bc837611e6_mc2011.PNG"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\4b851502-76e3-4215-ace1-308624faa972_mc.PNG",
+      "PackagePath": "staticwebassets\\images\\products\\4b851502-76e3-4215-ace1-308624faa972_mc.PNG"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\4d34c4ff-4d83-4598-8a07-c7a45b4f1635_9b45c9f1-77b7-4180-8f5e-1243f05a1e39_mc.PNG",
+      "PackagePath": "staticwebassets\\images\\products\\4d34c4ff-4d83-4598-8a07-c7a45b4f1635_9b45c9f1-77b7-4180-8f5e-1243f05a1e39_mc.PNG"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\51c187f5-f9ea-455c-841d-49209f1145ca_Mini-game 'Hành trình tri ân' - Chào mừng Ngày nhà Giáo Việt Nam 20-11.png",
+      "PackagePath": "staticwebassets\\images\\products\\51c187f5-f9ea-455c-841d-49209f1145ca_Mini-game 'Hành trình tri ân' - Chào mừng Ngày nhà Giáo Việt Nam 20-11.png"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\5bc9157a-973b-4c77-88bc-afe7ddbbc2de_mc2011.PNG",
+      "PackagePath": "staticwebassets\\images\\products\\5bc9157a-973b-4c77-88bc-afe7ddbbc2de_mc2011.PNG"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\6c9e2f28-1bf6-41c3-800a-9adc14419fa2_Screenshot 2023-10-22 123209.png",
+      "PackagePath": "staticwebassets\\images\\products\\6c9e2f28-1bf6-41c3-800a-9adc14419fa2_Screenshot 2023-10-22 123209.png"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\7844cc3b-d9eb-4ed5-9f45-1b0a8a034736_5bc9157a-973b-4c77-88bc-afe7ddbbc2de_mc2011.PNG",
+      "PackagePath": "staticwebassets\\images\\products\\7844cc3b-d9eb-4ed5-9f45-1b0a8a034736_5bc9157a-973b-4c77-88bc-afe7ddbbc2de_mc2011.PNG"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\92f616ee-1023-4d79-b8ec-f6275ead10e5_22d2e1b7-692c-4ff1-bc18-ff6ad95df9fb_story.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\92f616ee-1023-4d79-b8ec-f6275ead10e5_22d2e1b7-692c-4ff1-bc18-ff6ad95df9fb_story.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\9b45c9f1-77b7-4180-8f5e-1243f05a1e39_mc.PNG",
+      "PackagePath": "staticwebassets\\images\\products\\9b45c9f1-77b7-4180-8f5e-1243f05a1e39_mc.PNG"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\Capture.PNG",
+      "PackagePath": "staticwebassets\\images\\products\\Capture.PNG"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\Mini-game 'Hành trình tri ân' - Chào mừng Ngày nhà Giáo Việt Nam 20-11.png",
+      "PackagePath": "staticwebassets\\images\\products\\Mini-game 'Hành trình tri ân' - Chào mừng Ngày nhà Giáo Việt Nam 20-11.png"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\SequenceDiagramLapHDTT.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\SequenceDiagramLapHDTT.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\SoDoTuanTu1.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\SoDoTuanTu1.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\Usecase.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\Usecase.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\a1.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\a1.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\a10.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\a10.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\a2.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\a2.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\a3.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\a3.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\a4.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\a4.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\a5.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\a5.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\a6.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\a6.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\a7.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\a7.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\a8.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\a8.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\a9.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\a9.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\c52d3a5c-f769-40ab-acd7-bfd4eb9b1a01_5bc9157a-973b-4c77-88bc-afe7ddbbc2de_mc2011.PNG",
+      "PackagePath": "staticwebassets\\images\\products\\c52d3a5c-f769-40ab-acd7-bfd4eb9b1a01_5bc9157a-973b-4c77-88bc-afe7ddbbc2de_mc2011.PNG"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\c57a59c7-7a63-478e-8482-3c024875c39b_4b851502-76e3-4215-ace1-308624faa972_mc.PNG",
+      "PackagePath": "staticwebassets\\images\\products\\c57a59c7-7a63-478e-8482-3c024875c39b_4b851502-76e3-4215-ace1-308624faa972_mc.PNG"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\c7f8e27f-baa4-4aba-a0a3-79c08864ac25_4b851502-76e3-4215-ace1-308624faa972_mc.PNG",
+      "PackagePath": "staticwebassets\\images\\products\\c7f8e27f-baa4-4aba-a0a3-79c08864ac25_4b851502-76e3-4215-ace1-308624faa972_mc.PNG"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\e944c7fb-1493-49c4-a901-f123fadbda2d_Capture.PNG",
+      "PackagePath": "staticwebassets\\images\\products\\e944c7fb-1493-49c4-a901-f123fadbda2d_Capture.PNG"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\fae57f34-900d-4eea-900f-93724abd1aed_6c9e2f28-1bf6-41c3-800a-9adc14419fa2_Screenshot 2023-10-22 123209.png",
+      "PackagePath": "staticwebassets\\images\\products\\fae57f34-900d-4eea-900f-93724abd1aed_6c9e2f28-1bf6-41c3-800a-9adc14419fa2_Screenshot 2023-10-22 123209.png"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\fc688e40-d0fe-4c40-99ae-decf66bfb276_6c9e2f28-1bf6-41c3-800a-9adc14419fa2_Screenshot 2023-10-22 123209.png",
+      "PackagePath": "staticwebassets\\images\\products\\fc688e40-d0fe-4c40-99ae-decf66bfb276_6c9e2f28-1bf6-41c3-800a-9adc14419fa2_Screenshot 2023-10-22 123209.png"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\mc2011.PNG",
+      "PackagePath": "staticwebassets\\images\\products\\mc2011.PNG"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\n1.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\n1.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\n10.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\n10.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\n2.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\n2.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\n3.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\n3.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\n4.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\n4.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\n5.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\n5.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\n6.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\n6.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\n7.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\n7.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\n8.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\n8.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\n9.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\n9.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\p1.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\p1.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\p10.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\p10.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\p2.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\p2.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\p3.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\p3.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\p4.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\p4.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\p5.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\p5.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\p6.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\p6.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\p7.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\p7.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\p8.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\p8.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\images\\products\\p9.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\p9.jpg"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\js\\app.js",
+      "PackagePath": "staticwebassets\\js\\app.js"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\js\\app.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\js\\app.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\js\\app.js.map",
+      "PackagePath": "staticwebassets\\js\\app.js.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\asp\\DAASP\\DA\\DA\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.DA.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.DA.props",
+      "PackagePath": "build\\DA.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.DA.props",
+      "PackagePath": "buildMultiTargeting\\DA.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.DA.props",
+      "PackagePath": "buildTransitive\\DA.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

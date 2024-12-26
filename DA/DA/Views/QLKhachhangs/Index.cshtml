@@ -1,0 +1,55 @@
+﻿@model IEnumerable<DA.Models.Khachhang>
+
+@{
+    ViewData["Title"] = "Quản lý tài khoản khách hàng";
+}
+
+</br>
+<h1><b>QUẢN LÝ TÀI KHOẢN KHÁCH HÀNG</b></h1>
+<p>
+    <a asp-action="Index">Tất cả tài khoản khách hàng</a>
+</p>
+<form asp-controller="QLKhachhangs" asp-action="Index">
+    <span class="btn-group">
+        <input class="form-control" type="text" name="TenKH" placeholder="Tìm kiếm theo tên" />
+        <input class="p-1 ml-2 btn btn-sm btn-info" type="submit" value="Tìm kiếm" />
+    </span>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ten)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DienThoai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            @* <th>
+                @Html.DisplayNameFor(model => model.MatKhau)
+            </th> *@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ten)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DienThoai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MaKh" class="btn btn-outline-warning">Sửa</a> |
+                <a asp-action="Details" asp-route-id="@item.MaKh" class="btn btn-outline-success">Chi tiết</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

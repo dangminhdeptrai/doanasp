@@ -1,0 +1,82 @@
+﻿@model IEnumerable<dynamic>
+
+<br />
+<h1><b>THÔNG TIN DOANH THU THEO NGÀY</b></h1>
+<b class="text-danger">Doanh thu ngày hôm nay (@ViewBag.NgayHomNay):</b>
+<b class="text-danger">@ViewBag.DoanhThuHomNay.ToString("C0", System.Globalization.CultureInfo.GetCultureInfo("vi-VN"))</b>
+<table class="table text-center">
+    <thead>
+        <tr>
+            <th>Ngày</th>
+            <th>Doanh Thu</th>
+        </tr>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Ngay.ToString("dd/MM/yyyy")</td>
+                <td>@item.TongDoanhThu.ToString("C", new System.Globalization.CultureInfo("vi-VN"))</td> <!-- Định dạng tiền tệ -->
+            </tr>
+        }
+        <canvas id="doanhThuChart" width="400" height="200"></canvas>
+
+        <script>
+            // Dữ liệu doanh thu từ ViewBag
+            var doanhThuData = @Html.Raw(ViewBag.DoanhThuData);
+
+            // Lấy ngày và tổng doanh thu từ dữ liệu
+            var labels = doanhThuData.map(function (item) { return item.Ngay; });
+            var data = doanhThuData.map(function (item) { return item.TongDoanhThu; });
+
+            // Vẽ biểu đồ với Chart.js
+            var ctx = document.getElementById('doanhThuChart').getContext('2d');
+            var doanhThuChart = new Chart(ctx, {
+                type: 'line',  // Loại biểu đồ (line, bar, pie...)
+                data: {
+                    labels: labels,  // Dữ liệu ngày
+                    datasets: [{
+                        label: 'Tổng Doanh Thu',
+                        data: data,  // Dữ liệu tổng doanh thu
+                        borderColor: 'rgba(75, 192, 192, 1)',  // Màu đường biểu đồ
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',  // Màu nền biểu đồ
+                        fill: true,  // Hiển thị màu nền dưới đường biểu đồ
+                    }]
+                },
+                options: {
+                    responsive: true,  // Biểu đồ tự động điều chỉnh kích thước khi thay đổi kích thước màn hình
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (tooltipItem) {
+                                    return '₫' + tooltipItem.raw.toLocaleString();  // Hiển thị giá trị với định dạng tiền tệ
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,  // Đảm bảo trục Y bắt đầu từ 0
+                            ticks: {
+                                callback: function (value) {
+                                    return '₫' + value.toLocaleString();  // Định dạng tiền tệ cho trục Y
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        </script>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Tổng doanh thu:</th>
+            <th>@ViewBag.tdt.ToString("C0", System.Globalization.CultureInfo.GetCultureInfo("vi-VN"))</th>
+        </tr>
+    </tfoot>
+</table>
+

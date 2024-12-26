@@ -1,0 +1,31 @@
+﻿@model DA.Models.Nhanhang
+
+@{
+    ViewData["Title"] = "ChiTietNH";
+}
+<br>
+
+<h1>CHI TIẾT</h1>
+
+<div>
+    <h4>Nhãn hàng</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ten)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ten)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="SuaNH" asp-route-id="@Model?.MaNh" class="btn btn-outline-warning">Sửa</a>
+    <a asp-action="XemNhanHang" class="btn btn-outline-info">Quay lại</a>
+    @* <a asp-action="Index">Quay lại</a> *@
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

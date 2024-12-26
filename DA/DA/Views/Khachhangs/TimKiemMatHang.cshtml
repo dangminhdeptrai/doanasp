@@ -1,0 +1,130 @@
+﻿@model IEnumerable<DA.Models.Mathang>
+
+@{
+    ViewData["Title"] = "Tìm kiếm mặt hàng";
+}
+
+@{
+    var currentPage = ViewBag.CurrentPage ?? 1;
+    var totalPage = ViewBag.TotalPage ?? 1;
+}
+@if (TempData["ThemGioHang"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="themgiohangAlert">
+        @TempData["ThemGioHang"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    // Kiểm tra nếu thông báo thành công tồn tại
+    $(document).ready(function () {
+        // Set timeout để tự động ẩn alert sau 3 giây (3000ms)
+        window.setTimeout(function () {
+            $('.alert').fadeTo(500, 0).slideUp(500, function () {
+                $(this).remove(); // Loại bỏ alert khi đã ẩn
+            });
+        }, 3000); // 3000ms = 3 giây
+    });
+</script>
+
+<h2 class="text-warning">Kết quả cho từ khóa "@ViewData["tukhoa"]"</h2>
+
+<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+    @foreach (var item in Model)
+    {
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Sale badge-->
+                <div class="badge bg-danger text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Giảm giá</div>
+                <!-- Product image-->
+                <img class="card-img-top" src="~/images/products/@Html.DisplayFor(modelItem => item.HinhAnh)" alt="@Html.DisplayFor(modelItem => item.Ten)" />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <h5 class="fw-bolder text-dark">@Html.DisplayFor(modelItem => item.Ten)</h5>
+                        <!-- Product reviews-->
+                        <div class="d-flex justify-content-center small text-warning mb-2">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star"></div>
+                        </div>
+                        <!-- Product price-->
+                        <span class="text-muted text-decoration-line-through">@Html.DisplayFor(modelItem => item.GiaGoc)</span>
+                        <span class="text-danger fw-bolder">@Html.DisplayFor(modelItem => item.GiaBan)</span>
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center" style="margin-bottom: 10px"><a class="btn btn-outline-dark mt-auto" asp-controller="Khachhangs" asp-action="ChiTietMatHang" asp-route-id="@item.MaMh">Chi tiết</a></div>
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" asp-controller="Khachhangs" asp-action="AddToCart" asp-route-id="@item.MaMh">Thêm vào giỏ hàng</a></div>
+                </div>
+            </div>
+        </div>
+
+        @* <div class="card m-3 shadow" style="width:300px">
+    <div class="card-header"><h5 class="text-info">@Html.DisplayFor(modelItem => item.Ten)</h5></div>
+    <div class="card-body">
+    <div class="row">
+    <div class="col"><img class="card-img-top" src="~/images/products/@Html.DisplayFor(modelItem => item.HinhAnh)" alt="@Html.DisplayFor(modelItem => item.Ten)" /></div>
+    <div class="col">
+    <p class="card-text">@Html.DisplayFor(modelItem => item.GiaBan)</p>
+    <p class="card-text mt-auto" asp-controller="Khachhangs" asp-action="AddToCart" asp-route-id="@item.MaMh">@Html.DisplayFor(modelItem => item.GiaGoc)</p>
+    <a class="btn btn-primary">Chọn mua</a>
+    </div>
+    </div>
+    </div>
+    </div> *@
+    }
+</div>
+
+<div style="text-align: center; display: flex; justify-content: center; margin: 20px 0; gap: 10px;">
+    @if (currentPage > 1)
+    {
+        <a style="font-size: 18px; color: #007bff; text-decoration: none; padding: 8px 12px; border-radius: 4px; transition: background-color 0.3s, color 0.3s;"
+           onmouseover="this.style.color='#0056b3'; this.style.backgroundColor='#f0f0f0'; this.style.transform='scale(1.1)';"
+           onmouseout="this.style.color='#007bff'; this.style.backgroundColor='transparent'; this.style.transform='scale(1)';"
+           href="@Url.Action("TimKiemMatHang", new { TuKhoa = ViewBag.tukhoa, page = 1 })">
+            <i class="bi bi-chevron-double-left"></i>
+        </a>
+        <a style="font-size: 18px; color: #007bff; text-decoration: none; padding: 8px 12px; border-radius: 4px; transition: background-color 0.3s, color 0.3s;"
+           onmouseover="this.style.color='#0056b3'; this.style.backgroundColor='#f0f0f0'; this.style.transform='scale(1.1)';"
+           onmouseout="this.style.color='#007bff'; this.style.backgroundColor='transparent'; this.style.transform='scale(1)';"
+           href="@Url.Action("TimKiemMatHang", new { TuKhoa = ViewBag.tukhoa, page = currentPage - 1 })">
+            <i class="bi bi-caret-left-fill"></i>
+        </a>
+    }
+    @for (var i = Math.Max(1, currentPage - 1); i <= Math.Min(totalPage, currentPage + 1); i++)
+    {
+        <a style="color: #007bff; font-size: 18px; text-decoration: none; padding: 8px 12px; border-radius: 4px; transition: all 0.3s ease;
+                  @((i == currentPage) ? "font-weight: bold; color: #ffffff; background-color: #007bff;" : "")"
+           onmouseover="this.style.color='#0056b3'; this.style.backgroundColor='#f0f0f0'; this.style.transform='scale(1.1)';"
+           onmouseout="this.style.color='#007bff'; this.style.backgroundColor='transparent'; this.style.transform='scale(1)';"
+           href="@Url.Action("TimKiemMatHang", new { TuKhoa = ViewBag.tukhoa, page = i })" class="@((i == currentPage) ? "active" : "")">
+            @i
+        </a>
+    }
+    @* <span style="font-size: 16px; color: #333;">@currentPage / @totalPage</span> *@
+    @if (currentPage < totalPage)
+    {
+        <a style="font-size: 18px; color: #007bff; text-decoration: none; padding: 8px 12px; border-radius: 4px; transition: background-color 0.3s, color 0.3s;"
+           onmouseover="this.style.color='#0056b3'; this.style.backgroundColor='#f0f0f0'; this.style.transform='scale(1.1)';"
+           onmouseout="this.style.color='#007bff'; this.style.backgroundColor='transparent'; this.style.transform='scale(1)';"
+           href="@Url.Action("TimKiemMatHang", new { TuKhoa = ViewBag.tukhoa, page = currentPage + 1 })">
+            <i class="bi bi-caret-right-fill"></i>
+        </a>
+        <a style="font-size: 18px; color: #007bff; text-decoration: none; padding: 8px 12px; border-radius: 4px; transition: background-color 0.3s, color 0.3s;"
+           onmouseover="this.style.color='#0056b3'; this.style.backgroundColor='#f0f0f0'; this.style.transform='scale(1.1)';"
+           onmouseout="this.style.color='#007bff'; this.style.backgroundColor='transparent'; this.style.transform='scale(1)';"
+           href="@Url.Action("TimKiemMatHang", new { TuKhoa = ViewBag.tukhoa, page = totalPage })">
+            <i class="bi bi-chevron-double-right"></i>
+        </a>
+    }
+</div>

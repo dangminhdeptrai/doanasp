@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Cập nhật thông tin";
+}
+<h3>CẬP NHẬT THÔNG TIN</h3>
+<form asp-action="CapNhatThongTin">
+    <div class="mb-3">
+        <label>Email</label>
+        <input name="email" class="form-control" type="text" value="@ViewBag.khachhang.Email" readonly />
+    </div>
+    <div class="mb-3">
+        <label>Họ tên</label>
+        <input name="hoten" class="form-control" type="text" value="@ViewBag.khachhang.Ten" required />
+    </div>
+    <div class="mb-3">
+        <label>Điện thoại</label>
+        <input name="dienthoai" class="form-control" type="text" value="@ViewBag.khachhang.DienThoai" required />
+    </div>
+    <p>
+        <input class="btn btn-info" type="submit" value="Cập nhật thông tin">&nbsp;&nbsp;&nbsp;&nbsp;<a asp-action="ThongTinKhachHang" class="btn btn-success">Quay lại</a>
+    </p>
+</form>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Hồ sơ khách hàng";
+}
+@if (ViewBag.nhanvien != null)
+{
+    <h3>Chào @ViewBag.nhanvien.Ten!</h3>
+    <div class="mb-3">
+        <label>Email</label>
+        <input name="Email" class="form-control" type="text" value="@ViewBag.nhanvien.Email" readonly />
+    </div>
+    <div class="mb-3">
+        <label>Họ tên</label>
+        <input name="hoten" class="form-control" type="text" value="@ViewBag.nhanvien.Ten" readonly />
+    </div>
+    <div class="mb-3">
+        <label>Điện thoại</label>
+        <input name="dienthoai" class="form-control" type="text" value="@ViewBag.nhanvien.DienThoai" readonly />
+    </div>
+    <p><a asp-action="Signout">Đăng xuất</a></p>
+}
+else
+{
+    <p>Vui lòng <a asp-action="Login">Đăng nhập</a></p>
+}
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

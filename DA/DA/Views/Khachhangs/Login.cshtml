@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Đăng nhập";
+}
+
+@if (TempData["DangKy"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="dangkyAlert">
+        @TempData["DangKy"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+
+@if (TempData["DNKhachHangTB"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" id="failAlert">
+        @TempData["DNKhachHangTB"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+
+@if (TempData["DangXuatThanhCong"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="dangxuatAlert">
+        @TempData["DangXuatThanhCong"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    // Kiểm tra nếu thông báo thành công tồn tại
+    $(document).ready(function () {
+        // Set timeout để tự động ẩn alert sau 3 giây (3000ms)
+        window.setTimeout(function () {
+            $('.alert').fadeTo(500, 0).slideUp(500, function () {
+                $(this).remove(); // Loại bỏ alert khi đã ẩn
+            });
+        }, 3000); // 3000ms = 3 giây
+    });
+</script>
+
+<script>
+    // Kiểm tra nếu thông báo thành công tồn tại
+    $(document).ready(function () {
+        // Set timeout để tự động ẩn alert sau 3 giây (3000ms)
+        window.setTimeout(function () {
+            $('#dangkyAlert').fadeTo(500, 0).slideUp(500, function () {
+                $(this).remove(); // Loại bỏ alert khi đã ẩn
+            });
+        }, 3000); // 3000ms = 3 giây
+    });
+</script>
+
+<div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+        <div class="p-3 shadow">
+            <h3 class="text-center text-info">ĐĂNG NHẬP</h3>
+            <form method="post" asp-action="Login">
+                <input class="form-control" type="text" name="email"
+                       placeholder="Email" required><br>
+                <input class="form-control" type="password" name="matkhau"
+                       placeholder="Mật khẩu" required><br>
+                <div class="d-grid">
+                    <input class="btn btn-info btn-block" type="submit"
+                           value="Đăng nhập">
+                </div>
+            </form>
+            <div class="my-3 text-center">Chưa có tài khoản? <a asp-action="Register">Đăng ký</a></div>
+        </div>
+    </div>
+    <div class="col-sm-4"></div>
+</div>

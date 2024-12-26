@@ -1,0 +1,114 @@
+﻿@{
+    ViewData["Title"] = "Hồ sơ khách hàng";
+}
+
+@if (TempData["ThanhCong"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="successAlert">
+        @TempData["ThanhCong"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+
+@if (TempData["DangNhapThanhCong"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="dangnhapAlert">
+        @TempData["DangNhapThanhCong"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+
+@if (TempData["CapNhatTTThanhCong"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="CapNhatTTThanhCongAlert">
+        @TempData["CapNhatTTThanhCong"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+
+@if (TempData["Loi"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="loiAlert">
+        @TempData["Loi"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    // Kiểm tra nếu thông báo thành công tồn tại
+    $(document).ready(function () {
+        // Set timeout để tự động ẩn alert sau 3 giây (3000ms)
+        window.setTimeout(function () {
+            $('.alert').fadeTo(500, 0).slideUp(500, function () {
+                $(this).remove(); // Loại bỏ alert khi đã ẩn
+            });
+        }, 3000); // 3000ms = 3 giây
+    });
+</script>
+
+@* <script>
+    // Kiểm tra nếu thông báo thành công tồn tại
+    $(document).ready(function () {
+        // Set timeout để tự động ẩn alert sau 3 giây (3000ms)
+        window.setTimeout(function () {
+            $('#dangnhapAlert').fadeTo(500, 0).slideUp(500, function () {
+                $(this).remove(); // Loại bỏ alert khi đã ẩn
+            });
+        }, 3000); // 3000ms = 3 giây
+    });
+</script>
+
+<script>
+    // Kiểm tra nếu thông báo thành công tồn tại
+    $(document).ready(function () {
+        // Set timeout để tự động ẩn alert sau 3 giây (3000ms)
+        window.setTimeout(function () {
+            $('#CapNhatTTThanhCongAlert').fadeTo(500, 0).slideUp(500, function () {
+                $(this).remove(); // Loại bỏ alert khi đã ẩn
+            });
+        }, 3000); // 3000ms = 3 giây
+    }); *@
+</script>
+
+@if (ViewBag.khachhang != null)
+{
+    <h3>Chào @ViewBag.khachhang.Ten!</h3>
+    <div class="mb-3">
+        <label>Email</label>
+        <input name="Email" class="form-control" type="text" value="@ViewBag.khachhang.Email" readonly />
+    </div>
+    <div class="mb-3">
+        <label>Họ tên</label>
+        <input name="hoten" class="form-control" type="text" value="@ViewBag.khachhang.Ten" readonly />
+    </div>
+    <div class="mb-3">
+        <label>Điện thoại</label>
+        <input name="dienthoai" class="form-control" type="text" value="@ViewBag.khachhang.DienThoai" readonly />
+    </div>
+    <p>
+        <a asp-action="Signout" class="btn btn-warning">Đăng xuất</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a asp-action="DoiMatKhau" class="btn btn-danger">Đổi mật khẩu</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a asp-action="CapNhatThongTin" class="btn btn-primary">Đổi thông tin</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a asp-action="LichSuGiaoDich" class="btn btn-success">Lịch sử giao dịch</a>
+    </p>
+}
+else
+{
+    <p>Vui lòng <a asp-action="Login">Đăng nhập</a></p>
+}
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

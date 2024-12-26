@@ -1,0 +1,77 @@
+﻿@model DA.Models.Mathang
+
+@{
+    ViewData["Title"] = "Xóa mặt hàng";
+}
+<br>
+
+<h1>XÓA</h1>
+
+<h4>Mặt hàng</h4>
+<h3>Bạn có chắc chắn muốn xóa mặt hàng này?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ten)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ten)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.GiaGoc)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GiaGoc)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.GiaBan)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GiaBan)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MoTa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MoTa)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HinhAnh)
+        </dt>
+        <dd class="col-sm-10">
+            <img src="~/images/products/@Html.DisplayFor(model => model.HinhAnh)" width="100" />
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LuotXem)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LuotXem)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LuotMua)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LuotMua)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MaNhNavigation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MaNhNavigation.Ten)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="MaMh" />
+        <input type="submit" value="Xóa" class="btn btn-danger" />
+        <input asp-action="Index" type="submit" value="Quay lại" class="btn btn-info" />
+        @* <a asp-action="Index">Quay lại</a> *@
+    </form>
+</div>

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<DA.Models.Hoadon>
+
+@{
+    ViewData["Title"] = "Quản lý hóa đơn";
+}
+<br>
+<h1><b>QUẢN LÝ HÓA ĐƠN</b></h1>
+<p>
+    <a asp-action="Index">Tất cả hóa đơn</a>
+</p>
+<form asp-controller="Hoadons" asp-action="Index">
+    <span class="btn-group">
+        <input class="form-control" type="text" name="TenKH" placeholder="Tìm kiếm theo tên khách hàng" />
+        <input class="p-1 ml-2 btn btn-sm btn-info" type="submit" value="Tìm kiếm" />
+    </span>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MaHd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ngay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TongTien)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrangThai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaKhNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaHd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ngay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TongTien)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrangThai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaKhNavigation.Email)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.MaHd" class="btn btn-outline-success">Chi tiết</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

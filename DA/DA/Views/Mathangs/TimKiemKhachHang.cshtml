@@ -1,0 +1,104 @@
+﻿@model IEnumerable<DA.Models.Khachhang>
+
+@{
+    ViewData["Title"] = "Quản lý tài khoản khách hàng";
+}
+
+@{
+    var currentPage = ViewBag.CurrentPage ?? 1;
+    var totalPage = ViewBag.TotalPage ?? 1;
+}
+<br>
+<h1><b>QUẢN LÝ TÀI KHOẢN KHÁCH HÀNG</b></h1>
+<p>
+    <a asp-action="XemKhachHang">Tất cả tài khoản khách hàng</a>
+</p>
+<form asp-action="TimKiemKhachHang">
+    <span class="btn-group">
+        <input class="form-control" type="text" name="TuKhoa" placeholder="Nhập tên hoặc số điện thoại" required />
+        <input class="p-1 ml-2 btn btn-sm btn-info" type="submit" value="Tìm kiếm" />
+    </span>
+</form>
+<h1 class="text-warning">Kết quả cho từ khóa "@ViewData["tukhoa"]"</h1>
+<table class="table text-center">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ten)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DienThoai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            @* <th>
+            @Html.DisplayNameFor(model => model.MatKhau)
+            </th> *@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ten)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DienThoai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    <a asp-action="ChiTietKH" asp-route-id="@item.MaKh" class="btn btn-outline-success"><i class="fas fa-circle-info"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div style="text-align: center; display: flex; justify-content: center; margin: 20px 0; gap: 10px;">
+    @if (currentPage > 1)
+    {
+        <a style="font-size: 18px; color: #007bff; text-decoration: none; padding: 8px 12px; border-radius: 4px; transition: background-color 0.3s, color 0.3s;"
+           onmouseover="this.style.color='#0056b3'; this.style.backgroundColor='#f0f0f0'; this.style.transform='scale(1.1)';"
+           onmouseout="this.style.color='#007bff'; this.style.backgroundColor='transparent'; this.style.transform='scale(1)';"
+           href="@Url.Action("TimKiemKhachHang", new { TuKhoa = ViewBag.tukhoa, page = 1 })">
+            <i class="bi bi-chevron-double-left"></i>
+        </a>
+        <a style="font-size: 18px; color: #007bff; text-decoration: none; padding: 8px 12px; border-radius: 4px; transition: background-color 0.3s, color 0.3s;"
+           onmouseover="this.style.color='#0056b3'; this.style.backgroundColor='#f0f0f0'; this.style.transform='scale(1.1)';"
+           onmouseout="this.style.color='#007bff'; this.style.backgroundColor='transparent'; this.style.transform='scale(1)';"
+           href="@Url.Action("TimKiemKhachHang", new { TuKhoa = ViewBag.tukhoa, page = currentPage - 1 })">
+            <i class="bi bi-caret-left-fill"></i>
+        </a>
+    }
+    @for (var i = Math.Max(1, currentPage - 1); i <= Math.Min(totalPage, currentPage + 1); i++)
+    {
+        <a style="color: #007bff; font-size: 18px; text-decoration: none; padding: 8px 12px; border-radius: 4px; transition: all 0.3s ease;
+                  @((i == currentPage) ? "font-weight: bold; color: #ffffff; background-color: #007bff;" : "")"
+           onmouseover="this.style.color='#0056b3'; this.style.backgroundColor='#f0f0f0'; this.style.transform='scale(1.1)';"
+           onmouseout="this.style.color='#007bff'; this.style.backgroundColor='transparent'; this.style.transform='scale(1)';"
+           href="@Url.Action("TimKiemKhachHang", new { TuKhoa = ViewBag.tukhoa, page = i })" class="@((i == currentPage) ? "active" : "")">
+            @i
+        </a>
+    }
+    @* <span style="font-size: 16px; color: #333;">@currentPage / @totalPage</span> *@
+    @if (currentPage < totalPage)
+    {
+        <a style="font-size: 18px; color: #007bff; text-decoration: none; padding: 8px 12px; border-radius: 4px; transition: background-color 0.3s, color 0.3s;"
+           onmouseover="this.style.color='#0056b3'; this.style.backgroundColor='#f0f0f0'; this.style.transform='scale(1.1)';"
+           onmouseout="this.style.color='#007bff'; this.style.backgroundColor='transparent'; this.style.transform='scale(1)';"
+           href="@Url.Action("TimKiemKhachHang", new { page = currentPage + 1 })">
+            <i class="bi bi-caret-right-fill"></i>
+        </a>
+        <a style="font-size: 18px; color: #007bff; text-decoration: none; padding: 8px 12px; border-radius: 4px; transition: background-color 0.3s, color 0.3s;"
+           onmouseover="this.style.color='#0056b3'; this.style.backgroundColor='#f0f0f0'; this.style.transform='scale(1.1)';"
+           onmouseout="this.style.color='#007bff'; this.style.backgroundColor='transparent'; this.style.transform='scale(1)';"
+           href="@Url.Action("TimKiemKhachHang", new { page = totalPage })">
+            <i class="bi bi-chevron-double-right"></i>
+        </a>
+    }
+</div>
+<a href="#top" class="btn btn-success align-content-center" style="float: right;">Lên đầu trang</a>

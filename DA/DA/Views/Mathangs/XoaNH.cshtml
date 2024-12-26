@@ -1,0 +1,29 @@
+﻿@model DA.Models.Nhanhang
+
+@{
+    ViewData["Title"] = "Xóa nhãn hàng";
+}
+<br />
+
+<h1>XÓA</h1>
+
+<h4>Nhãn hàng</h4>
+<h3>Bạn có chắc chắn muốn xóa nhãn hàng này?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ten)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ten)
+        </dd>
+    </dl>
+
+    <form asp-action="XoaNH">
+        <input type="hidden" asp-for="MaNh" />
+        <input type="submit" value="Xóa" class="btn btn-danger" />
+        <input asp-action="XemNhanHang" type="submit" value="Quay lại" class="btn btn-info" />
+        @* <a asp-action="Index">Quay lại</a> *@
+    </form>
+</div>

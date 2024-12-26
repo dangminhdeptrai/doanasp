@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Cửa hàng giày bóng đá NLDM</title>
+
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body id="top">
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+        <div class="container px-4 px-lg-5 bg-muted">
+            <a class="navbar-brand" asp-action="Index"><img src="~/images//logo/logo.png" width="100" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" asp-action="Index" style="font-size: 20px">Trang chính</a></li>
+                    @* <li class="nav-item"><a class="nav-link active" aria-current="page" asp-action="SanPhamBanChay" style="font-size: 20px">Bán chạy</a></li> *@
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 20px">Sắp xếp</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" asp-action="SanPhamBanChay">Bán chạy</a></li>
+                            <li><a class="dropdown-item" asp-action="GiaCaoThap">Giá cao -> thấp</a></li>
+                            <li><a class="dropdown-item" asp-action="GiaThapCao">Giá thấp -> cao</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 20px">Hãng giày</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            @foreach (var d in (List<Nhanhang>)ViewBag.nhanhang)
+                            {
+                                <li><a class="dropdown-item" asp-action="List" asp-route-id="@d.MaNh">@d.Ten</a></li>
+                            }
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <form asp-controller="Khachhangs" asp-action="TimKiemMatHang">
+                        <span class="btn-group">
+                            <input class="form-control" type="text" name="TuKhoa" placeholder="Nhập từ khóa" required />
+                            <input class="p-1 ml-2 btn btn-sm btn-warning" type="submit" value="Tìm kiếm" />
+                        </span>
+                    </form>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    @if (ViewBag.khachhang != null)
+                    {
+                        <a asp-action="ThongTinKhachHang" class="btn btn-outline-light text-warning fw-bold"><i class="bi bi-person"></i>Tài khoản @ViewBag.khachang</a>
+                    }
+                    else
+                    {
+                        <a asp-action="Login" class="btn btn-outline-light text-warning fw-bold"><i class="bi bi-person"></i></a>
+                    }
+                    &nbsp;
+                    <a asp-action="ViewCart" class="btn btn-outline-light">
+                        <i class="bi bi-cart3"></i> Giỏ hàng <span class="badge bg-danger text-white ms-1 rounded-pill">
+                            @ViewData["slg"]
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section-->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-1">
+            <div>
+                @RenderBody()
+            </div>
+            @* <ul class="pagination justify-content-center" style="margin:20px 0">
+            <li class="page-item"><a class="page-link" href="#"><i class="bi bi-caret-left-fill"></i></a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#"><i class="bi bi-caret-right-fill"></i></a></li>
+            </ul> *@
+        </div>
+    </section>
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide shadow" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/images/carousels/carousel1.jpg" alt="Giày bóng đá" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/carousels/carousel2.jpg" alt="Giày bóng đá" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/carousels/carousel3.jpg" alt="Giày bóng đá" class="d-block w-100">
+            </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="text-center mb-5"><a class="text-warning" href="#top"><i class="bi bi-chevron-up" style="font-size: 3rem; font-weight: bold; color:white;"></i></a></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6 text-light">
+                    <h4>
+                        <span class="badge text-white bg-success">N</span>
+                        <span class="badge text-white bg-danger">L</span>
+                        <span class="badge text-white bg-primary">D</span>
+                        <span class="badge text-white bg-warning">M</span> Shop - Cửa hàng giày bóng đá
+                    </h4>
+                    <p>
+                        <b><i>Địa chỉ:</i></b> 18 Ung Văn Khiêm, phường Đông Xuyên, TP Long Xuyên, An Giang<br>
+                        <b><i>Điện thoại:</i></b> 0 999 999 999<br>
+                        <b><i>Email:</i></b> nldm@shop.com
+                    </p>
+                </div>
+                <div class="col-3 bg-dark">
+                    <h4 class="text-danger">LIÊN KẾT</h4>
+                    <a href="#" class="text-light bg bg-dark">www.facebook.com/nldmshop</a><br>
+                    <a href="#" class="text-light bg bg-dark">www.instagramcom/nldmshop</a>
+                </div>
+                <div class="col-3 bg-dark">
+                    <h4 class="text-danger">DỊCH VỤ</h4>
+                    <a href="#" class="text-light bg-dark">Hướng dẫn mua hàng</a><br>
+                    <a href="#" class="text-light bg-dark">Câu hỏi thường gặp</a><br>
+                    <a href="#" class="text-light bg-dark">Liên hệ với chúng tôi</a>
+                </div>
+            </div>
+            <hr>
+            <p class="m-0 text-center text-warning fw-bolder">Copyright &copy; NLDM Shop 2024</p>
+        </div>
+    </footer>
+
+    @RenderSection("Scripts", required: false)
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+﻿@model DA.Models.Nhanhang
+
+@{
+    ViewData["Title"] = "Thêm mới nhãn hàng";
+}
+<br />
+<h1>THÊM MỚI</h1>
+
+<h4>Nhãn hàng</h4>
+<hr />
+<div class="row" id="view">
+    <div class="col-md-4">
+        <form asp-action="ThemNH">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Ten" class="control-label"></label>
+                <input asp-for="Ten" class="form-control" required/>
+                <span asp-validation-for="Ten" class="text-danger"></span>
+            </div>
+            </br>
+            <div class="form-group">
+                <input type="submit" value="Thêm" class="btn btn-primary" />
+                <a asp-action="XemNhanHang" class="btn btn-info">Quay lại</a>
+            </div>
+        </form>
+    </div>
+</div>
+@*
+<div>
+    <a asp-action="Index">Quay lại</a>
+</div> *@
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
